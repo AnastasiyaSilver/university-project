@@ -2,8 +2,8 @@ package pl.asilver.university.service;
 
 import pl.asilver.university.entity.Professor;
 
-public class TeacherService {
-    public static void performTeacherAction(Professor professor){
+public class ProfessorService {
+    public static void performProfessorAction(Professor professor){
         professor.introduce();
         professor.teach();
     }
