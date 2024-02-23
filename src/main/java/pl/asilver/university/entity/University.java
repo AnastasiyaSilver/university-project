@@ -12,6 +12,6 @@ public class University {
     }
 
     public void setUniversityName(String universityName) {
-        universityName = this.universityName;
+        this.universityName = universityName;
     }
 }

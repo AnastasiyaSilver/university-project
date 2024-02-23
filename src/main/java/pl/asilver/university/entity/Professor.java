@@ -1,8 +1,5 @@
 package pl.asilver.university.entity;
 
-import pl.asilver.university.service.BaseAction;
-import pl.asilver.university.service.ProfessorAction;
-
 public abstract class Professor extends University implements BaseAction, ProfessorAction {
     private String professorName;
     private String studyField;
@@ -39,13 +36,13 @@ public abstract class Professor extends University implements BaseAction, Profes
     }
 
     @Override
-    public void introduce(Professor professor){
+    public void introduce(){
         System.out.println("I am professor " + getProfessorName() + " and I teach " +
                 getStudyField() + " at the " + getUniversity() + ".");
     }
 
     @Override
-    public void teach(Professor professor){
+    public void teach(){
         System.out.println("I teach " + getStudyField() +
                 " and I love to prepare colloquia often.");
     }

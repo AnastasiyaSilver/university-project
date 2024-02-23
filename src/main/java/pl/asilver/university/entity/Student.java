@@ -1,9 +1,6 @@
 package pl.asilver.university.entity;
 
-import pl.asilver.university.service.BaseAction;
-import pl.asilver.university.service.StudentAction;
-
-public abstract class Student extends University implements BaseAction, StudentAction {
+public class Student extends University implements BaseAction, StudentAction {
     private String studentName;
     private String studyField;
     private University university;
@@ -39,14 +36,14 @@ public abstract class Student extends University implements BaseAction, StudentA
     }
 
     @Override
-    public void introduce(Student student) {
-        System.out.println("Hello, my name is " + getStudentName() + " and I study "
-                + getStudyField() + " at " + getUniversity() + ".");
+    public void introduce() {
+        System.out.println("Hello, my name is " + studentName + " and I study "
+                + studyField + " at " + getUniversityName() + ".");
     }
 
     @Override
     public void study() {
-        System.out.println("I study and go to the " + getUniversity()
+        System.out.println("I study and go to the " + getUniversityName()
                 + " every day to learn something new.");
     }
 }

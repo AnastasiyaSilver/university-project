@@ -1,9 +1,7 @@
-package pl.asilver.university.service;
+package pl.asilver.university.entity;
 
 import pl.asilver.university.entity.Student;
 
 public interface StudentAction {
-    void introduce(Student student);
-
     public void study();
 }
