@@ -4,6 +4,14 @@ public class Student extends University implements BaseAction, StudentAction {
     private String studentName;
     private String studyField;
     private University university;
+    private Professor professor;
+
+    public Student(String universityName, String studentName, String studyField, Professor professor) {
+        super(universityName);
+        this.studentName = studentName;
+        this.studyField = studyField;
+        this.professor = professor;
+    }
 
     public Student(String universityName, String studentName, String studyField) {
         super(universityName);
@@ -35,10 +43,18 @@ public class Student extends University implements BaseAction, StudentAction {
         this.university = university;
     }
 
+    public Professor getProfessor() {
+        return this.professor;
+    }
+
+    public void setProfessor(Professor professor) {
+        this.professor = professor;
+    }
+
     @Override
     public void introduce() {
         System.out.println("Hello, my name is " + studentName + " and I study "
-                + studyField + " at " + getUniversityName() + ".");
+                + studyField + " at " + getUniversityName() + ". My favorite professor is: " + getProfessor());
     }
 
     @Override
