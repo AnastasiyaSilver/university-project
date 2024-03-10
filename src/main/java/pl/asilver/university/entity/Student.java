@@ -19,6 +19,10 @@ public class Student extends University implements BaseAction, StudentAction {
         this.studyField = studyField;
     }
 
+    public Student(String studentName) {
+        this.studentName = studentName;
+    }
+
     public String getStudentName() {
         return this.studentName;
     }

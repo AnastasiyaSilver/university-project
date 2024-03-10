@@ -19,6 +19,10 @@ public class Professor extends University implements BaseAction, ProfessorAction
         this.studyField = studyField;
     }
 
+    public Professor(String professorName) {
+        this.professorName = professorName;
+    }
+
     public String getProfessorName() {
         return this.professorName;
     }
