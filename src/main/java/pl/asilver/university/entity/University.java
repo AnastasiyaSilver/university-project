@@ -3,6 +3,9 @@ package pl.asilver.university.entity;
 public class University {
     private String universityName;
 
+    public University() {
+    }
+
     public University(String universityName) {
         this.universityName = universityName;
     }

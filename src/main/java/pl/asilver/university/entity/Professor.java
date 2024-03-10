@@ -6,8 +6,8 @@ public class Professor extends University implements BaseAction, ProfessorAction
     private University university;
     private Student student;
 
-    public Professor(String universityName, String professorName, String studyField, Student student) {
-        super(universityName);
+    public Professor(University university, String professorName, String studyField, Student student) {
+        this.university = university;
         this.professorName = professorName;
         this.studyField = studyField;
         this.student = student;
