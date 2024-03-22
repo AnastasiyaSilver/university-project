@@ -28,21 +28,23 @@ public class _Main {
         Professor professor6 = new Professor(university3, "Joanne Corrie", "Genetics");
         Student student6 = new Student(university3, "Kelly Salem", "Medical Biotechnology", professor6);
 
+        System.out.println("The students are introducing themselves:");
         student4.introduce();
         student4.study();
-
+        System.out.println("");
         student5.introduce();
         student5.study();
-
+        System.out.println("");
         student6.introduce();
         student6.study();
-
+        System.out.println("");
+        System.out.println("The professors are introducing themselves:");
         professor1.introduce();
         professor1.teach();
-
+        System.out.println("");
         professor2.introduce();
         professor2.teach();
-
+        System.out.println("");
         professor3.introduce();
         professor3.teach();
 
