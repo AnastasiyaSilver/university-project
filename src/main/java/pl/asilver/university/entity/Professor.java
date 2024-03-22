@@ -1,6 +1,6 @@
 package pl.asilver.university.entity;
 
-public class Professor extends University implements BaseAction, ProfessorAction {
+public class Professor implements BaseAction, ProfessorAction {
     private String professorName;
     private String studyField;
     private University university;
@@ -13,8 +13,8 @@ public class Professor extends University implements BaseAction, ProfessorAction
         this.student = student;
     }
 
-    public Professor(String universityName, String professorName, String studyField) {
-        super(universityName);
+    public Professor(University university, String professorName, String studyField) {
+        this.university = university;
         this.professorName = professorName;
         this.studyField = studyField;
     }
@@ -58,12 +58,17 @@ public class Professor extends University implements BaseAction, ProfessorAction
     @Override
     public void introduce() {
         System.out.println("Hello, I am professor " + getProfessorName() + " and I teach " +
-                getStudyField() + " at the " + getUniversityName() + ". One of my students is: " + student);
+                getStudyField() + " at the " + university + ". One of my students is: " + student);
     }
 
     @Override
     public void teach() {
         System.out.println("I teach " + getStudyField() +
                 " and I love to prepare colloquia often.");
+    }
+
+    @Override
+    public String toString() {
+        return professorName;
     }
 }

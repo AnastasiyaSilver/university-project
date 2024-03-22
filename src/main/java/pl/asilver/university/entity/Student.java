@@ -1,20 +1,20 @@
 package pl.asilver.university.entity;
 
-public class Student extends University implements BaseAction, StudentAction {
+public class Student implements BaseAction, StudentAction {
     private String studentName;
     private String studyField;
     private University university;
     private Professor professor;
 
-    public Student(String universityName, String studentName, String studyField, Professor professor) {
-        super(universityName);
+    public Student(University university, String studentName, String studyField, Professor professor) {
+        this.university = university;
         this.studentName = studentName;
         this.studyField = studyField;
         this.professor = professor;
     }
 
-    public Student(String universityName, String studentName, String studyField) {
-        super(universityName);
+    public Student(University university, String studentName, String studyField) {
+        this.university = university;
         this.studentName = studentName;
         this.studyField = studyField;
     }
@@ -58,12 +58,17 @@ public class Student extends University implements BaseAction, StudentAction {
     @Override
     public void introduce() {
         System.out.println("Hello, my name is " + studentName + " and I study "
-                + studyField + " at " + getUniversityName() + ". My favorite professor is: " + getProfessor());
+                + studyField + " at " + university + ". My favorite professor is: " + getProfessor());
     }
 
     @Override
     public void study() {
-        System.out.println("I study and go to the " + getUniversityName()
+        System.out.println("I study and go to the " + university
                 + " every day to learn something new.");
+    }
+
+    @Override
+    public String toString() {
+        return studentName;
     }
 }
