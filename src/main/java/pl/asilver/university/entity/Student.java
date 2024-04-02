@@ -58,7 +58,7 @@ public class Student implements BaseAction, StudentAction {
     @Override
     public void introduce() {
         System.out.println("Hello, my name is " + studentName + " and I study "
-                + studyField + " at " + university + ". My favorite professor is: " + getProfessor());
+                + studyField + " at " + university + ". My favorite professor is: " + professor);
     }
 
     @Override
